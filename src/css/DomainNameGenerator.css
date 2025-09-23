@@ -1,0 +1,239 @@
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  color: rgb(1, 1, 1);
+  user-select: none;
+  -webkit-user-select: none;   /* Safari */
+  -ms-user-select: none;       /* old Edge */
+  -webkit-touch-callout: none; /* iOS long-press menu */
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 15vh;
+}
+
+
+.header {
+  font-size: 1.05rem;
+}
+
+
+.subheader {
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+
+.input__container input {
+  background: rgba(232, 232, 232, 0.243);
+  box-shadow: 0px 3px 10px rgba(17, 17, 17, 0.107);
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.441);
+  padding: 0.62em 1.2em;
+  width: 100%;
+  max-width: 600px;
+}
+
+
+.input__container input::placeholder {
+  color: rgba(0, 0, 0, 0.348);
+}
+
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+.generate-btn,
+.ten-generate-btn,
+.thirty-generate-btn,
+.sixty-generate-btn,
+.onehundred-generate-btn {
+  font-size: small;
+  background: rgb(56, 56, 224);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  padding: 0.65em 2.2em;
+  margin: 2%;
+  transition: all 0.2s;
+}
+
+
+.generate-btn:hover {
+  background: rgba(105, 19, 255, 0.86);
+  transform: translateY(-1px);
+}
+
+
+.ten-generate-btn:hover {
+  background: rgba(237, 61, 17, 0.86);
+  transform: translateY(-1px);
+}
+
+
+.thirty-generate-btn:hover {
+  background: rgba(143, 203, 13, 0.86);
+  transform: translateY(-1px);
+}
+
+
+.sixty-generate-btn:hover {
+  background: rgba(201, 13, 13, 0.86);
+  transform: translateY(-1px);
+}
+
+
+.onehundred-generate-btn:hover {
+  background: rgba(8, 193, 168, 0.86);
+  transform: translateY(-1px);
+}
+
+
+.empty-msg {
+  font-size: 0.78rem;
+  font-weight: 400;
+  font-style: italic;
+  color: grey;
+}
+
+
+.name-eclipse {
+  width: 100%;
+  max-width: 1000px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.182);
+  padding: 0.55em 1.2em;
+  transition: transform 0.3s;
+}
+
+
+.name-eclipse:hover {
+  transform: translateY(-2px);
+}
+
+
+.name {
+  text-align: start;
+}
+
+
+.copy-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  display: block;
+  transition: color 0.3s;
+}
+
+
+.copy-btn:hover {
+  cursor: pointer;
+  color: rgba(128, 128, 128, 0.481);
+}
+
+
+.copy-text {
+  background: rgba(201, 255, 201, 0.769);
+  padding: 0.35rem;
+  border-radius: 5px;
+  color: green;
+  font-weight: 600;
+}
+
+
+.copy-text:empty {
+  background: none;
+}
+
+
+/* MOBILIY */
+.name-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+
+.btns {
+  gap: 0.75rem;
+}
+
+
+
+@media (max-width: 900px) {
+  .container { margin-top: 10vh; padding: 1rem; }
+  .name-eclipse {
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.182);
+  padding: 0.55em 1.2em;
+  transition: transform 0.3s;
+}
+  .name-wrapper { display: flex; flex-direction: column; }
+}
+
+
+
+@media (max-width: 700px) {
+  .container { margin-top: 8vh; padding: 1rem; }
+  .btns { flex-wrap: wrap; }
+  .input__container input { max-width: 100%; }
+  .name-eclipse {
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.182);
+  padding: 0.55em 1.2em;
+  transition: transform 0.3s;
+}
+  .name-wrapper { 
+    display: flex; flex-direction: column; 
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .container { margin-top: 4vh; }
+  .name { font-size: 0.95rem; padding: 0.5em 0.9em; }
+  .name-eclipse {
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.182);
+    padding: 0.55em 1.2em;
+    transition: transform 0.3s;
+  }
+  .name-wrapper { display: flex; flex-direction: column; }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #141414;
+    color: #fff;
+  }
+
+  .name-eclipse {
+    background: #232323;
+  }
+
+  .copy-btn {
+    color: #fff;
+  }
+}
