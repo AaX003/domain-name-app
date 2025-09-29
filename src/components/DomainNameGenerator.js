@@ -161,11 +161,11 @@ function DomainNameGenerator() {
        
       </main>
       <div className="btns">
-        <button className="generate-btn" onClick={generateName}>Generate Name</button>
-        <button className="ten-generate-btn" onClick={generateTenNames}>Generate 10 Names</button>
-        <button className="thirty-generate-btn" onClick={generateThirtyNames}>Generate 30 Names</button>
-        <button className="sixty-generate-btn" onClick={generateSixtyNames}>Generate 60 Names</button>
-        <button className="onehundred-generate-btn" onClick={generateOneHundredNames}>Generate 100 Names</button>
+        <button className="generate-btn" onClick={generateName}>1 Name</button>
+        <button className="ten-generate-btn" onClick={generateTenNames}>10 Names</button>
+        <button className="thirty-generate-btn" onClick={generateThirtyNames}>30 Names</button>
+        <button className="sixty-generate-btn" onClick={generateSixtyNames}>60 Names</button>
+        <button className="onehundred-generate-btn" onClick={generateOneHundredNames}>100 Names</button>
       </div>
       
       <main id="name-container" className="name__container">
